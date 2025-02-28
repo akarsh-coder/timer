@@ -62,5 +62,3 @@ npm run android
 - Completed timers are visually distinct (`gray background, ✅ Completed label`).  
 
 ---
-
-This README ensures smooth setup and helps developers understand key design choices. Let me know if you need any modifications! 🚀
