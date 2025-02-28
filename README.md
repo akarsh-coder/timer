@@ -1,7 +1,3 @@
-Here’s your **README.md** with setup instructions for both **yarn** and **npm**, excluding iOS instructions.  
-
----
-
 # **🕒 Timer App**  
 
 ## **📌 Setup Instructions**  
