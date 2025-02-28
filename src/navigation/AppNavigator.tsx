@@ -1,8 +1,12 @@
 import HomeScreen from '../screens/HomeScreen';
 import History from '../screens/History';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-const Tab = createBottomTabNavigator();
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { NavigationContainer } from '@react-navigation/native';
+import AddTimer from '../screens/AddTimer';
+const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 interface TimerIconProps {
   color: string;
   size: number;
@@ -13,8 +17,8 @@ const TimerIcon = ({color, size}: TimerIconProps) => (
 const HistoryIcon = ({color, size}: TimerIconProps) => (
     <MaterialIcons name="history" size={size} color={color} />
   );
-  
-export default function AppNavigator() {
+
+function AppNavigator() {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -31,7 +35,7 @@ export default function AppNavigator() {
         component={HomeScreen}
         options={{
           tabBarIcon: TimerIcon,
-          headerTitle: 'My Timers',
+          headerTitle: 'Timers',
         }}
       />
       <Tab.Screen
@@ -39,9 +43,19 @@ export default function AppNavigator() {
         component={History}
         options={{
           tabBarIcon: HistoryIcon,
-          headerTitle: 'History',
+          headerTitle: 'Timer History',
         }}
       />
     </Tab.Navigator>
+  );
+}
+export default function AppStackNavigator() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="MainTabs" component={AppNavigator} />
+        <Stack.Screen name="AddTimer" component={AddTimer} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
