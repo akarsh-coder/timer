@@ -62,3 +62,26 @@ npm run android
 - Completed timers are visually distinct (`gray background, ✅ Completed label`).  
 
 ---
+
+### **🚧 Features Under Development**  
+
+We’re already working on some exciting new features for future updates. Here’s a sneak peek at what’s coming soon:  
+
+⚙️ **Background Timer Support**  
+- Timers will continue running even when the app is closed or in the background.  
+
+⚙️ **Push Notifications**  
+- Receive alerts when a timer completes, even if you’re not actively using the app.  
+
+⚙️ **Export Timer Data**  
+- Export your timer history as a JSON file for easy backup or analysis.  
+
+⚙️ **Light/Dark Mode Support**  
+- A theme switcher will allow you to customize the app’s appearance to suit your preferences.  
+
+⚙️ **Filter Dropdown**  
+- Filter timers by category (e.g., Work, Study, Break) for better organization and management.  
+
+---
+
+### **🙏 Thank You!**
